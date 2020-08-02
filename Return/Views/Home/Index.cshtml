@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h1>Wprowadź dane zwrotu</h1>
+    <div>
+        <form action="Home\AddNewReturn" method="post">
+            <div class="form-group">
+                <input type="text" name="OrderNumber" class="form-control form-control-lg" placeholder="Numer zamówienia">
+            </div>
+            <div class="form-group">
+                <input type="text" name="CustomerName" class="form-control form-control-lg" placeholder="Imię">
+            </div>
+            <div class="form-group">
+                <input type="text" name="CustomerLastName" class="form-control form-control-lg" placeholder="Nazwisko">
+            </div>
+            <div class="form-group">
+                <input type="date" name="DeliveryDate" class="form-control form-control-lg" placeholder="Data otrzymania zamówienia">
+            </div>
+            <div class="form-group">
+                <input type="text" name="ProductsToReturn" class="form-control form-control-lg" placeholder="Produkty do zwrotu">
+            </div>
+            <div class="form-group">
+                <input type="text" name="ValueToReturn" class="form-control form-control-lg" placeholder="Wartość towaru do zwrotu">
+            </div>
+            <div class="form-group">
+                <input type="text" name="BankAccount" class="form-control form-control-lg" placeholder="Numer konta do zwrotu">
+            </div>
+            <input class="btn btn-block btn-lg btn-primary" type="submit" value="Kolejny krok" />
+        </form>
+    </div>
+
+
+

@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "NewReturnStep1";
+}
+
+@model Return.Models.ViewModels.ReturnViewModel
+<html>
+<body>
+    <h1>Wprowadź adres odbioru przesyłki</h1>
+    <div>
+        <form action="AddAddressAndSendNotification" method="post">
+            <div class="form-group">
+                <input type="text" name="CustomerName" class="form-control form-control-lg" value="@Model.CustomerName">
+            </div>
+            <div class="form-group">
+                <input type="text" name="CustomerLastName" class="form-control form-control-lg" value="@Model.CustomerLastName">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Street" class="form-control form-control-lg" placeholder="Ulica">
+            </div>
+            <div class="form-group">
+                <input type="text" name="StreetNumber" class="form-control form-control-lg" placeholder="Numer domu">
+            </div>
+            <div class="form-group">
+                <input type="text" name="ZipCode" class="form-control form-control-lg" placeholder="Kod pocztowy">
+            </div>
+            <div class="form-group">
+                <input type="text" name="City" class="form-control form-control-lg" placeholder="Miasto">
+            </div>
+            <div class="form-group">
+                <input type="text" name="PhoneNumber" class="form-control form-control-lg" placeholder="Numer telefonu">
+            </div>
+            <div class="form-group">
+                <input type="text" name="Email" class="form-control form-control-lg" placeholder="E-mail">
+                <input type="hidden" name="ReturnId" value="@Model.Id">
+            </div>
+            <input class="btn btn-block btn-lg btn-primary" type="submit" value="Wyślij zgłoszenie" />
+        </form>
+    </div>
+</body>
+</html>
+
