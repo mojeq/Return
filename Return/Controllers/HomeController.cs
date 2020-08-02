@@ -24,11 +24,11 @@ namespace Return.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult NewReturnStart()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult NewReturnStart()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
         public IActionResult AddNewReturn(ReturnViewModel newReturn)
